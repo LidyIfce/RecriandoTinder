@@ -20,6 +20,7 @@
 		AFE4EC9C24BF414B00FDB716 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4EC9B24BF414B00FDB716 /* UILabel.swift */; };
 		AFE4EC9F24BF455700FDB716 /* usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4EC9E24BF455700FDB716 /* usuario.swift */; };
 		AFE4ECA224BF473400FDB716 /* usuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4ECA124BF473400FDB716 /* usuarioService.swift */; };
+		AFE4ECA424BF4BE100FDB716 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4ECA324BF4BE100FDB716 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		AFE4EC9B24BF414B00FDB716 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		AFE4EC9E24BF455700FDB716 /* usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuario.swift; sourceTree = "<group>"; };
 		AFE4ECA124BF473400FDB716 /* usuarioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuarioService.swift; sourceTree = "<group>"; };
+		AFE4ECA324BF4BE100FDB716 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			children = (
 				AFD2CC9924BCA9D000C477FC /* UIView.swift */,
 				AFE4EC9B24BF414B00FDB716 /* UILabel.swift */,
+				AFE4ECA324BF4BE100FDB716 /* UIImageView.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFE4ECA224BF473400FDB716 /* usuarioService.swift in Sources */,
+				AFE4ECA424BF4BE100FDB716 /* UIImageView.swift in Sources */,
 				AFD2CC9A24BCA9D000C477FC /* UIView.swift in Sources */,
 				AFE4EC9724BF379400FDB716 /* CombineCardView.swift in Sources */,
 				AFC2A31624BDEFF10040A7D9 /* CombineViewController.swift in Sources */,
