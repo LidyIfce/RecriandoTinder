@@ -18,6 +18,8 @@
 		AFE4EC9724BF379400FDB716 /* CombineCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4EC9624BF379400FDB716 /* CombineCardView.swift */; };
 		AFE4EC9A24BF3E4300FDB716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE4EC9924BF3E4300FDB716 /* Main.storyboard */; };
 		AFE4EC9C24BF414B00FDB716 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4EC9B24BF414B00FDB716 /* UILabel.swift */; };
+		AFE4EC9F24BF455700FDB716 /* usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4EC9E24BF455700FDB716 /* usuario.swift */; };
+		AFE4ECA224BF473400FDB716 /* usuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4ECA124BF473400FDB716 /* usuarioService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		AFE4EC9624BF379400FDB716 /* CombineCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCardView.swift; sourceTree = "<group>"; };
 		AFE4EC9924BF3E4300FDB716 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFE4EC9B24BF414B00FDB716 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		AFE4EC9E24BF455700FDB716 /* usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuario.swift; sourceTree = "<group>"; };
+		AFE4ECA124BF473400FDB716 /* usuarioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuarioService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 		AFD2CC6824BC9CC500C477FC /* RecriandoTinder */ = {
 			isa = PBXGroup;
 			children = (
+				AFE4ECA024BF472200FDB716 /* service */,
+				AFE4EC9D24BF454000FDB716 /* Model */,
 				AFE4EC9824BF393C00FDB716 /* Lib */,
 				AFE4EC9524BF378300FDB716 /* view */,
 				AFC2A31424BDEFAC0040A7D9 /* Controller */,
@@ -159,6 +165,22 @@
 				AFE4EC9B24BF414B00FDB716 /* UILabel.swift */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		AFE4EC9D24BF454000FDB716 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFE4EC9E24BF455700FDB716 /* usuario.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFE4ECA024BF472200FDB716 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				AFE4ECA124BF473400FDB716 /* usuarioService.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,9 +314,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE4ECA224BF473400FDB716 /* usuarioService.swift in Sources */,
 				AFD2CC9A24BCA9D000C477FC /* UIView.swift in Sources */,
 				AFE4EC9724BF379400FDB716 /* CombineCardView.swift in Sources */,
 				AFC2A31624BDEFF10040A7D9 /* CombineViewController.swift in Sources */,
+				AFE4EC9F24BF455700FDB716 /* usuario.swift in Sources */,
 				AFD2CC6A24BC9CC500C477FC /* AppDelegate.swift in Sources */,
 				AFE4EC9C24BF414B00FDB716 /* UILabel.swift in Sources */,
 				AFD2CC6C24BC9CC500C477FC /* SceneDelegate.swift in Sources */,
