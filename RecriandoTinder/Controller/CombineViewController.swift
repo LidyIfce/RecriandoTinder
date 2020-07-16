@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum Acao{
+    case like, deslike
+}
+
 class CombineViewController: UIViewController{
     
     var perfilButton: UIButton = .iconMenu(named: "icone-perfil")
@@ -90,6 +94,16 @@ extension CombineViewController{
             view.insertSubview(card, at: 0)
         }
     }
+    
+    
+    func removerCard(card: UIView){
+        card.removeFromSuperview()
+        
+        usuarios.removeAll { (usuario) -> Bool in
+            usuario.id == card.tag
+        }
+    }
+    
 }
 
 extension CombineViewController{
@@ -113,12 +127,50 @@ extension CombineViewController{
             card.transform = CGAffineTransform(rotationAngle: rotationAngle)
             
             if gesture.state == .ended{
+                
+                if card.center.x > self.view.bounds.width + 50{
+                    animarCard(rotatingAngle: rotationAngle, acao: .like)
+                    return
+                }
+                if card.center.x < -50{
+                    animarCard(rotatingAngle: rotationAngle, acao: .deslike)
+                    return
+                }
+                
                 UIView.animate(withDuration: 0.2){
                     card.center = self.view.center
                     card.transform = .identity
                     
                     card.likeImageView.alpha = 0
                     card.deslikeImageView.alpha = 0
+                }
+            }
+        }
+    }
+    
+    
+    func animarCard(rotatingAngle: CGFloat, acao: Acao){
+        
+        if let usuario = self.usuarios.first{
+            for view in self.view.subviews{
+                if view.tag == usuario.id{
+                    if let card = view as? CombineCardView{
+                        let center: CGPoint
+                        
+                        switch acao {
+                        case .like:
+                            center = CGPoint(x: card.center.x + self.view.bounds.width, y: card.center.y + 50)
+                        case .deslike:
+                            center = CGPoint(x: card.center.x - self.view.bounds.width, y: card.center.y + 50)
+                        }
+                        
+                        UIView.animate(withDuration: 0.2, animations: {
+                            card.center = center
+                            card.transform = CGAffineTransform(rotationAngle: rotatingAngle)
+                        }){ ( _ ) in
+                            self.removerCard(card: card)
+                        }
+                    }
                 }
             }
         }
