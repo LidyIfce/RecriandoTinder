@@ -109,6 +109,12 @@ extension CombineViewController{
         }
     }
     
+    func verificarMatch(usuario:Usuario){
+        if usuario.match{
+            print("Wooow!")
+        }
+    }
+    
 }
 
 extension CombineViewController{
@@ -196,6 +202,10 @@ extension CombineViewController{
                             card.likeImageView.alpha = like ? 1 : 0
                             card.deslikeImageView.alpha = like ? 0 : 1
                         }){ ( _ ) in
+                            
+                            if like{
+                                self.verificarMatch(usuario: usuario)
+                            }
                             self.removerCard(card: card)
                         }
                     }
