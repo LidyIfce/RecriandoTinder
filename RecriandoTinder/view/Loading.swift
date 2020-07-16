@@ -22,7 +22,17 @@ class Loading : UIView{
         return load
     }()
     
-    
+    let perfilImageView:UIImageView = {
+        let image = UIImageView()
+        image.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        image.layer.cornerRadius = 50
+        image.layer.borderWidth = 5
+        image.layer.borderColor = UIColor.systemBackground.cgColor
+        image.clipsToBounds = true
+        image.image = UIImage(named: "perfil")
+        
+        return image
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +40,11 @@ class Loading : UIView{
         addSubview(loadView)
         loadView.center = center
         
+        addSubview(perfilImageView)
+        perfilImageView.center = center
+        
         self.animacao()
+        
     }
     
     required init?(coder: NSCoder) {
