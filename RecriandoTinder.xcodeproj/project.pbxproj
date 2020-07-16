@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1EDD1A24C08B2700078AD0 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EDD1924C08B2700078AD0 /* UIButton.swift */; };
 		AFC2A31624BDEFF10040A7D9 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2A31524BDEFF10040A7D9 /* CombineViewController.swift */; };
 		AFD2CC6A24BC9CC500C477FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD2CC6924BC9CC500C477FC /* AppDelegate.swift */; };
 		AFD2CC6C24BC9CC500C477FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD2CC6B24BC9CC500C477FC /* SceneDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1EDD1924C08B2700078AD0 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		AFC2A31524BDEFF10040A7D9 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
 		AFD2CC6624BC9CC500C477FC /* RecriandoTinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecriandoTinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD2CC6924BC9CC500C477FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,17 +121,14 @@
 		AFD2CC6824BC9CC500C477FC /* RecriandoTinder */ = {
 			isa = PBXGroup;
 			children = (
+				AFD2CC6924BC9CC500C477FC /* AppDelegate.swift */,
+				AFD2CC6B24BC9CC500C477FC /* SceneDelegate.swift */,
 				AFE4ECA024BF472200FDB716 /* service */,
 				AFE4EC9D24BF454000FDB716 /* Model */,
 				AFE4EC9824BF393C00FDB716 /* Lib */,
 				AFE4EC9524BF378300FDB716 /* view */,
 				AFC2A31424BDEFAC0040A7D9 /* Controller */,
-				AFD2CC6924BC9CC500C477FC /* AppDelegate.swift */,
-				AFD2CC6B24BC9CC500C477FC /* SceneDelegate.swift */,
-				AFD2CC7224BC9CC700C477FC /* Assets.xcassets */,
-				AFD2CC7424BC9CC700C477FC /* LaunchScreen.storyboard */,
 				AFD2CC7724BC9CC700C477FC /* Info.plist */,
-				AFE4EC9924BF3E4300FDB716 /* Main.storyboard */,
 			);
 			path = RecriandoTinder;
 			sourceTree = "<group>";
@@ -155,6 +154,9 @@
 		AFE4EC9524BF378300FDB716 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				AFD2CC7224BC9CC700C477FC /* Assets.xcassets */,
+				AFD2CC7424BC9CC700C477FC /* LaunchScreen.storyboard */,
+				AFE4EC9924BF3E4300FDB716 /* Main.storyboard */,
 				AFE4EC9624BF379400FDB716 /* CombineCardView.swift */,
 			);
 			path = view;
@@ -166,6 +168,7 @@
 				AFD2CC9924BCA9D000C477FC /* UIView.swift */,
 				AFE4EC9B24BF414B00FDB716 /* UILabel.swift */,
 				AFE4ECA324BF4BE100FDB716 /* UIImageView.swift */,
+				AF1EDD1924C08B2700078AD0 /* UIButton.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				AFD2CC9A24BCA9D000C477FC /* UIView.swift in Sources */,
 				AFE4EC9724BF379400FDB716 /* CombineCardView.swift in Sources */,
 				AFC2A31624BDEFF10040A7D9 /* CombineViewController.swift in Sources */,
+				AF1EDD1A24C08B2700078AD0 /* UIButton.swift in Sources */,
 				AFE4EC9F24BF455700FDB716 /* usuario.swift in Sources */,
 				AFD2CC6A24BC9CC500C477FC /* AppDelegate.swift in Sources */,
 				AFE4EC9C24BF414B00FDB716 /* UILabel.swift in Sources */,

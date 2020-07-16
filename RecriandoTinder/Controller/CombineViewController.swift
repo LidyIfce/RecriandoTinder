@@ -10,6 +10,14 @@ import UIKit
 
 class CombineViewController: UIViewController{
     
+    var perfilButton: UIButton = .iconMenu(named: "icone-perfil")
+    var chatButton: UIButton = .iconMenu(named: "icone-chat")
+    var logoButton: UIButton = .iconMenu(named: "icone-logo")
+    
+    var deslikeButton: UIButton = .iconFooter(named: "icone-deslike")
+    var superlikeButton: UIButton = .iconFooter(named: "icone-superlike")
+    var likeButton: UIButton = .iconFooter(named: "icone-like")
+    
     var usuarios : [Usuario] = []
     
     
@@ -17,8 +25,13 @@ class CombineViewController: UIViewController{
         
         super.viewDidLoad()
         
+        
         view.backgroundColor = UIColor.systemGroupedBackground
         
+        navigationController?.navigationBar.isHidden = true
+        
+        self.adicionarHeader()
+        self.adicionarFooter()
         self.buscarUsuarios()
         
     }
@@ -29,6 +42,31 @@ class CombineViewController: UIViewController{
     }
    
 }
+
+
+extension CombineViewController{
+    
+    func adicionarHeader(){
+        
+        let window = UIApplication.shared.windows.first { $0.isKeyWindow }
+        let top: CGFloat = window?.safeAreaInsets.top ?? 44
+        
+       let stackView = UIStackView(arrangedSubviews: [perfilButton, logoButton, chatButton])
+       stackView.distribution = .equalCentering
+       
+       view.addSubview(stackView)
+    stackView.preencher(top: view.topAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, bottom: nil, padding: .init(top: top, left: 16, bottom: 0, right: 16))
+   }
+    
+    func adicionarFooter(){
+        let stackView = UIStackView(arrangedSubviews: [UIView(),deslikeButton, superlikeButton, likeButton, UIView()])
+        stackView.distribution = .equalCentering
+        
+        view.addSubview(stackView)
+        stackView.preencher(top: nil, leading: view.leadingAnchor, trailing: view.trailingAnchor, bottom: view.bottomAnchor, padding: .init(top: 0, left: 16, bottom: 32, right: 16))
+    }
+}
+
 
 extension CombineViewController{
     
