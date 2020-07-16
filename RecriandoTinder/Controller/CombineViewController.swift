@@ -31,12 +31,14 @@ class CombineViewController: UIViewController{
         
         
         view.backgroundColor = UIColor.systemGroupedBackground
-        
         navigationController?.navigationBar.isHidden = true
+        
+        let loading = Loading(frame: view.frame)
+        view.insertSubview(loading, at: 0)
         
         self.adicionarHeader()
         self.adicionarFooter()
-        self.buscarUsuarios()
+     //   self.buscarUsuarios()
         
     }
     
@@ -96,7 +98,7 @@ extension CombineViewController{
              
             card.addGestureRecognizer(gesture)
                 
-            view.insertSubview(card, at: 0)
+            view.insertSubview(card, at: 1)
         }
     }
     
