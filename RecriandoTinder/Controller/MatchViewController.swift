@@ -11,6 +11,15 @@ import UIKit
 
 class MatchViewController: UIViewController {
     
+    var usuario:Usuario?{
+        didSet{
+            if let usuario = usuario{
+                imageView.image = UIImage(named: usuario.foto)
+                mensagemLabel.text = "\(usuario.nome) curtiu você também!"
+            }
+        }
+    }
+    
     let imageView: UIImageView = .fotoImageView(named: "pessoa-1")
     let likeImageView: UIImageView = .fotoImageView(named: "icone-like")
     let mensagemLabel: UILabel = .textBoldLabel(18, textColor: .white, numberOfLines: 1)
@@ -21,7 +30,7 @@ class MatchViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.heightAnchor.constraint(equalToConstant: 44).isActive = true
         textField.placeholder = "Diga algo legal..."
-        textField.backgroundColor = .systemGroupedBackground
+        textField.backgroundColor = .darkGray
         textField.layer.cornerRadius = 8
         textField.textColor = .white
         textField.returnKeyType = .go
@@ -59,9 +68,16 @@ class MatchViewController: UIViewController {
         view.addSubview(imageView)
         imageView.preencherSuperView()
         
-        mensagemLabel.text = "Ana curtiu você também!"
+        let gradiente = CAGradientLayer()
+        gradiente.frame = view.frame
+        gradiente.colors = [UIColor.clear.cgColor, UIColor.clear.cgColor, UIColor.black.cgColor]
+        
+        imageView.layer.addSublayer(gradiente)
+        
         mensagemLabel.textAlignment = .center
         mensagemLabel.adicionaShadow()
+        
+        voltarButton.addTarget(self, action: #selector(voltarClique), for: .touchUpInside)
         
         likeImageView.translatesAutoresizingMaskIntoConstraints = false
         likeImageView.heightAnchor.constraint(equalToConstant: 44).isActive = true
@@ -77,5 +93,9 @@ class MatchViewController: UIViewController {
         view.addSubview(stackView)
         stackView.preencher(top: nil, leading: view.leadingAnchor, trailing: view.trailingAnchor, bottom: view.bottomAnchor, padding: .init(top: 0, left: 32, bottom: 44, right: 32))
         
+    }
+    
+    @objc func voltarClique(){
+        self.dismiss(animated: true, completion: nil)
     }
 }

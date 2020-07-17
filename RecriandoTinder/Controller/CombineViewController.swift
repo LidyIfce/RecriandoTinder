@@ -127,6 +127,7 @@ extension CombineViewController{
             print("Wooow!")
             
             let machVC = MatchViewController()
+            machVC.usuario = usuario
        
             machVC.modalPresentationStyle = .fullScreen
             
