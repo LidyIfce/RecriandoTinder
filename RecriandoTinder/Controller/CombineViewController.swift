@@ -125,6 +125,13 @@ extension CombineViewController{
     func verificarMatch(usuario:Usuario){
         if usuario.match{
             print("Wooow!")
+            
+            let machVC = MatchViewController()
+       
+            machVC.modalPresentationStyle = .fullScreen
+            
+            
+            self.present(machVC, animated: true, completion: nil)
         }
     }
     
