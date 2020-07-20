@@ -100,8 +100,7 @@ extension CombineViewController{
             card.tag = usuario.id
             
             card.callback = { (data) in
-              //  self.visualizarDetalhe(usuario: data)
-                print(data)
+                self.visualizarDetalhe(usuario: data)
             }
              
             let gesture = UIPanGestureRecognizer()
@@ -137,8 +136,8 @@ extension CombineViewController{
     }
     
     func visualizarDetalhe(usuario:Usuario){
-        let detalheVC = UIViewController()
-        detalheVC.view.backgroundColor = .red
+        let detalheVC = DetalheViewController()
+       
         detalheVC.modalPresentationStyle = .fullScreen
         
         self.present(detalheVC, animated: true, completion: nil)

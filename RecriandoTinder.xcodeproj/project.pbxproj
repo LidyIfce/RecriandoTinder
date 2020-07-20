@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF05118324C6194500C81588 /* DetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05118224C6194500C81588 /* DetalheViewController.swift */; };
+		AF05118524C61FD500C81588 /* DetalheHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05118424C61FD500C81588 /* DetalheHeaderView.swift */; };
 		AF1EDD1A24C08B2700078AD0 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EDD1924C08B2700078AD0 /* UIButton.swift */; };
 		AF1EDD1C24C0A09A00078AD0 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EDD1B24C0A09A00078AD0 /* Loading.swift */; };
 		AF1EDD3424C1E62400078AD0 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EDD3324C1E62400078AD0 /* MatchViewController.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF05118224C6194500C81588 /* DetalheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewController.swift; sourceTree = "<group>"; };
+		AF05118424C61FD500C81588 /* DetalheHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheHeaderView.swift; sourceTree = "<group>"; };
 		AF1EDD1924C08B2700078AD0 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		AF1EDD1B24C0A09A00078AD0 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		AF1EDD3324C1E62400078AD0 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			children = (
 				AFC2A31524BDEFF10040A7D9 /* CombineViewController.swift */,
 				AF1EDD3324C1E62400078AD0 /* MatchViewController.swift */,
+				AF05118224C6194500C81588 /* DetalheViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				AFE4EC9924BF3E4300FDB716 /* Main.storyboard */,
 				AFE4EC9624BF379400FDB716 /* CombineCardView.swift */,
 				AF1EDD1B24C0A09A00078AD0 /* Loading.swift */,
+				AF05118424C61FD500C81588 /* DetalheHeaderView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -332,6 +338,8 @@
 				AFD2CC9A24BCA9D000C477FC /* UIView.swift in Sources */,
 				AF1EDD1C24C0A09A00078AD0 /* Loading.swift in Sources */,
 				AFE4EC9724BF379400FDB716 /* CombineCardView.swift in Sources */,
+				AF05118324C6194500C81588 /* DetalheViewController.swift in Sources */,
+				AF05118524C61FD500C81588 /* DetalheHeaderView.swift in Sources */,
 				AFC2A31624BDEFF10040A7D9 /* CombineViewController.swift in Sources */,
 				AF1EDD1A24C08B2700078AD0 /* UIButton.swift in Sources */,
 				AFE4EC9F24BF455700FDB716 /* usuario.swift in Sources */,
