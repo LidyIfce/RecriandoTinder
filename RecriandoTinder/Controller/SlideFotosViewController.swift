@@ -38,6 +38,7 @@ class SlideFotosViewController: UICollectionViewController, UICollectionViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .black
         collectionView.register(SlideFotoCell.self, forCellWithReuseIdentifier: cellId)
         
