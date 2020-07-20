@@ -41,6 +41,14 @@ class DetalheViewController:UICollectionViewController, UICollectionViewDelegate
     
     var deslikeButton: UIButton = .iconFooter(named: "icone-deslike")
     var likeButton: UIButton = .iconFooter(named: "icone-like")
+    var voltarButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "icone-down"), for: .normal)
+        button.backgroundColor = UIColor(red: 232/255, green: 88/255, blue: 54/255, alpha: 1)
+        button.clipsToBounds = true
+        
+        return button
+    }()
     
     
     var usuario:Usuario?{
@@ -73,6 +81,20 @@ class DetalheViewController:UICollectionViewController, UICollectionViewDelegate
         collectionView.register(DetalheHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
         
         self.adicionarFooter()
+        self.adicionarVoltar()
+        
+    }
+    
+    func adicionarVoltar(){
+        view.addSubview(voltarButton)
+        voltarButton.frame = CGRect(
+            x: view.bounds.width - 69,
+            y: view.bounds.height * 0.7 - 24,
+            width: 40,
+            height: 48
+        )
+        voltarButton.layer.cornerRadius = 24
+        voltarButton.addTarget(self, action: #selector(voltarClique), for: .touchUpInside)
         
     }
     
@@ -132,6 +154,16 @@ class DetalheViewController:UICollectionViewController, UICollectionViewDelegate
         
         return .init(width: width, height: heigth)
        }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let originY = view.bounds.height * 0.7 - 24
+        
+        if scrollView.contentOffset.y > 0{
+            self.voltarButton.frame.origin.y = originY - scrollView.contentOffset.y
+        }else{
+            self.voltarButton.frame.origin.y = originY + scrollView.contentOffset.y * -1
+        }
+    }
     
     @objc func voltarClique(){
         self.dismiss(animated: true, completion: nil)
