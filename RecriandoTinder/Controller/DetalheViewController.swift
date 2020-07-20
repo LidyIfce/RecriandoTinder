@@ -55,7 +55,7 @@ class DetalheViewController:UICollectionViewController, UICollectionViewDelegate
         super.viewDidLoad()
         
         collectionView.contentInsetAdjustmentBehavior = .never
-      //  collectionView.backgroundColor = .yellow
+        collectionView.backgroundColor = .black
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(DetalhePerfilCell.self, forCellWithReuseIdentifier: perfilId)
         collectionView.register(DetalheFotosCell.self, forCellWithReuseIdentifier: fotosId)
