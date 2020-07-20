@@ -10,7 +10,7 @@ import UIKit
 
 extension UILabel{
     
-    static func textLabel(_ size: CGFloat, textColor: UIColor = .black, numberOfLines: Int = 1) -> UILabel{
+    static func textLabel(_ size: CGFloat, textColor: UIColor = .black, numberOfLines: Int = 0) -> UILabel{
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: size)
         label.textColor = textColor

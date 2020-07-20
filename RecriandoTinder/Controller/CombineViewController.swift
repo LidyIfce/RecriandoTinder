@@ -137,7 +137,7 @@ extension CombineViewController{
     
     func visualizarDetalhe(usuario:Usuario){
         let detalheVC = DetalheViewController()
-       
+        detalheVC.usuario = usuario
         detalheVC.modalPresentationStyle = .fullScreen
         
         self.present(detalheVC, animated: true, completion: nil)
