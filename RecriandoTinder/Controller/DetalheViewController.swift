@@ -8,6 +8,28 @@
 
 import UIKit
 
+class HeaderLayout: UICollectionViewFlowLayout{
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        let layoutAttributes = super.layoutAttributesForElements(in: rect)
+        
+        layoutAttributes?.forEach({ (attribute) in
+            if attribute.representedElementKind == UICollectionView.elementKindSectionHeader{
+                
+                guard let collectionView = collectionView else {return}
+                
+                let contentOfSetY = collectionView.contentOffset.y
+                attribute.frame = CGRect(x: 0, y: contentOfSetY, width: collectionView.bounds.width, height: attribute.bounds.height - contentOfSetY)
+            }
+        })
+        
+        return layoutAttributes
+    }
+    
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        return true
+    }
+}
+
 class DetalheViewController:UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     let cellId = "cellId"
@@ -15,7 +37,7 @@ class DetalheViewController:UICollectionViewController, UICollectionViewDelegate
     
     
     init() {
-        super.init(collectionViewLayout:UICollectionViewFlowLayout())
+        super.init(collectionViewLayout:HeaderLayout())
     }
     
     required init?(coder: NSCoder) {
