@@ -35,7 +35,7 @@ class DetalheViewController:UICollectionViewController, UICollectionViewDelegate
     let cellId = "cellId"
     let headerId = "headerId"
     let perfilId = "PerfilId"
-    
+    let fotosId = "fotosId"
     var usuario:Usuario?{
         didSet{
             self.collectionView.reloadData()
@@ -55,24 +55,30 @@ class DetalheViewController:UICollectionViewController, UICollectionViewDelegate
         super.viewDidLoad()
         
         collectionView.contentInsetAdjustmentBehavior = .never
-        collectionView.backgroundColor = .yellow
+      //  collectionView.backgroundColor = .yellow
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(DetalhePerfilCell.self, forCellWithReuseIdentifier: perfilId)
+        collectionView.register(DetalheFotosCell.self, forCellWithReuseIdentifier: fotosId)
+        
         
         collectionView.register(DetalheHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
         
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-//        cell.backgroundColor = .blue
-//        return cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: perfilId, for: indexPath) as! DetalhePerfilCell
-        cell.usuario = self.usuario
+        
+        if indexPath.item == 0{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: perfilId, for: indexPath) as! DetalhePerfilCell
+            cell.usuario = self.usuario
+            return cell
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: fotosId, for: indexPath) as! DetalheFotosCell
+        
         return cell
     }
     
@@ -89,14 +95,18 @@ class DetalheViewController:UICollectionViewController, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width: CGFloat = UIScreen.main.bounds.width
-        var heigth: CGFloat = 100
+        var heigth: CGFloat = UIScreen.main.bounds.width * 0.66
         
-        let cell = DetalhePerfilCell(frame: CGRect(x: 0, y: 0, width: width, height: heigth))
-        cell.layoutIfNeeded()
-        cell.usuario = self.usuario
-        let estimativaTamanho = cell.systemLayoutSizeFitting(CGSize(width: width, height: 1000))
-        heigth = estimativaTamanho.height
+        if indexPath.item == 0{
+            let cell = DetalhePerfilCell(frame: CGRect(x: 0, y: 0, width: width, height: heigth))
+            cell.layoutIfNeeded()
+            cell.usuario = self.usuario
+            let estimativaTamanho = cell.systemLayoutSizeFitting(CGSize(width: width, height: 1000))
+            heigth = estimativaTamanho.height
+                   
+        }
         
+       
         
         return .init(width: width, height: heigth)
        }

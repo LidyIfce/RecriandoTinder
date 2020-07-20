@@ -10,6 +10,8 @@
 		AF05118324C6194500C81588 /* DetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05118224C6194500C81588 /* DetalheViewController.swift */; };
 		AF05118524C61FD500C81588 /* DetalheHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05118424C61FD500C81588 /* DetalheHeaderView.swift */; };
 		AF05118724C623C100C81588 /* DetalhePerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05118624C623C100C81588 /* DetalhePerfilCell.swift */; };
+		AF05118924C6320200C81588 /* DetalheFotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05118824C6320200C81588 /* DetalheFotosCell.swift */; };
+		AF05118B24C6355D00C81588 /* SlideFotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05118A24C6355D00C81588 /* SlideFotosViewController.swift */; };
 		AF1EDD1A24C08B2700078AD0 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EDD1924C08B2700078AD0 /* UIButton.swift */; };
 		AF1EDD1C24C0A09A00078AD0 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EDD1B24C0A09A00078AD0 /* Loading.swift */; };
 		AF1EDD3424C1E62400078AD0 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EDD3324C1E62400078AD0 /* MatchViewController.swift */; };
@@ -50,6 +52,8 @@
 		AF05118224C6194500C81588 /* DetalheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewController.swift; sourceTree = "<group>"; };
 		AF05118424C61FD500C81588 /* DetalheHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheHeaderView.swift; sourceTree = "<group>"; };
 		AF05118624C623C100C81588 /* DetalhePerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhePerfilCell.swift; sourceTree = "<group>"; };
+		AF05118824C6320200C81588 /* DetalheFotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheFotosCell.swift; sourceTree = "<group>"; };
+		AF05118A24C6355D00C81588 /* SlideFotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideFotosViewController.swift; sourceTree = "<group>"; };
 		AF1EDD1924C08B2700078AD0 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		AF1EDD1B24C0A09A00078AD0 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		AF1EDD3324C1E62400078AD0 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				AFC2A31524BDEFF10040A7D9 /* CombineViewController.swift */,
 				AF1EDD3324C1E62400078AD0 /* MatchViewController.swift */,
 				AF05118224C6194500C81588 /* DetalheViewController.swift */,
+				AF05118A24C6355D00C81588 /* SlideFotosViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				AF1EDD1B24C0A09A00078AD0 /* Loading.swift */,
 				AF05118424C61FD500C81588 /* DetalheHeaderView.swift */,
 				AF05118624C623C100C81588 /* DetalhePerfilCell.swift */,
+				AF05118824C6320200C81588 /* DetalheFotosCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				AF1EDD3424C1E62400078AD0 /* MatchViewController.swift in Sources */,
 				AFE4ECA224BF473400FDB716 /* usuarioService.swift in Sources */,
 				AFE4ECA424BF4BE100FDB716 /* UIImageView.swift in Sources */,
+				AF05118924C6320200C81588 /* DetalheFotosCell.swift in Sources */,
 				AFD2CC9A24BCA9D000C477FC /* UIView.swift in Sources */,
 				AF1EDD1C24C0A09A00078AD0 /* Loading.swift in Sources */,
 				AFE4EC9724BF379400FDB716 /* CombineCardView.swift in Sources */,
@@ -347,6 +354,7 @@
 				AF1EDD1A24C08B2700078AD0 /* UIButton.swift in Sources */,
 				AF05118724C623C100C81588 /* DetalhePerfilCell.swift in Sources */,
 				AFE4EC9F24BF455700FDB716 /* usuario.swift in Sources */,
+				AF05118B24C6355D00C81588 /* SlideFotosViewController.swift in Sources */,
 				AFD2CC6A24BC9CC500C477FC /* AppDelegate.swift in Sources */,
 				AFE4EC9C24BF414B00FDB716 /* UILabel.swift in Sources */,
 				AFD2CC6C24BC9CC500C477FC /* SceneDelegate.swift in Sources */,
